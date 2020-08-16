@@ -17,3 +17,8 @@ c.Authenticator.whitelist = {'muy', 'chrigi', 'vince', 'dmaag', 'fdaniel', 'joha
 c.Authenticator.admin_users = {'muy'}
 c.SystemUserSpawner.host_homedir_format_string = '/home/srv-user/volumes/jupyterhub/home/{username}'
 c.NotebookApp.terminado_settings={'shell_command': ['bash']}
+c.DockerSpawner.volumes = {
+    "/usr/bin/docker": "/usr/bin/docker",
+    "/usr/bin/docker-compose": "/usr/bin/docker-compose",
+    "/var/run/docker.sock": "/var/run/docker.sock"
+}

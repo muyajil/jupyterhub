@@ -13,9 +13,8 @@ c.JupyterHub.services = [
         'command': 'python /cull_idle_servers.py --timeout=3600'.split(),
     },
 ]
-c.Authenticator.whitelist = {'muy', 'chrigi', 'vince', 'dmaag', 'fdaniel', 'johan', 'avayl'}
 c.Authenticator.admin_users = {'muy'}
-c.SystemUserSpawner.host_homedir_format_string = '/home/srv-user/volumes/jupyterhub/home/{username}'
+c.SystemUserSpawner.host_homedir_format_string = os.environ['HOME_PREFIX'] + '/home/{username}'
 c.NotebookApp.terminado_settings={'shell_command': ['bash']}
 c.DockerSpawner.volumes = {
     "/usr/bin/docker": "/usr/bin/docker",

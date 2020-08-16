@@ -20,5 +20,8 @@ c.NotebookApp.terminado_settings={'shell_command': ['bash']}
 c.DockerSpawner.volumes = {
     "/usr/bin/docker": "/usr/bin/docker",
     "/usr/bin/docker-compose": "/usr/bin/docker-compose",
-    "/var/run/docker.sock": "/var/run/docker.sock"
+    "/var/run/docker.sock": "/var/run/docker.sock",
+    "/etc/passwd": "/etc/passwd",
+    "/etc/shadow": "/etc/shadow",
+    "/etc/group": "/etc/group"
 }

@@ -22,5 +22,6 @@ c.DockerSpawner.volumes = {
     "/var/run/docker.sock": "/var/run/docker.sock",
     "/etc/passwd": "/etc/passwd",
     "/etc/shadow": "/etc/shadow",
-    "/etc/group": "/etc/group"
+    "/etc/group": "/etc/group",
+    "/home/{username}/.ssh/id_rsa:/home/{username}/.ssh/id_rsa"
 }

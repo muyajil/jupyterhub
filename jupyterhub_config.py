@@ -24,3 +24,4 @@ c.DockerSpawner.volumes = {
     "/etc/shadow": "/etc/shadow",
     "/etc/group": "/etc/group"
 }
+c.PAMAuthenticator.open_sessions = False
